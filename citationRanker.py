@@ -233,6 +233,4 @@ if __name__ == "__main__":
     pt = PaperTitle(conf_name=args.conferences, year_start=args.year_start, year_end=args.year_end,
                     output_file=args.output_file, keyword=args.keyword, driver_path=args.driver)
     pt.get_paper_list()
-# pt = PaperTitle("naacl,icml,iclr,nips", 2019, 2020)
-# pt.get_paper_list()
-# paper_title = 'Sequence and Time Aware Neighborhood for Session-based Recommendations: STAN'
+
