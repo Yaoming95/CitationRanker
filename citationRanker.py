@@ -7,6 +7,7 @@ import requests
 from bs4 import BeautifulSoup
 import argparse
 from tqdm import tqdm
+import datetime
 
 SLEEP_TIME = 1.5
 
@@ -99,7 +100,7 @@ class PaperTitle():
         self._conf_name = conf_name.lower().split(",")
         self._conf_name = list(map(lambda x: x.strip(), self._conf_name))
         if year_end is None:
-            year_end = year_start
+            year_end = datetime.datetime.now().year
         self._years = range(year_start, year_end + 1)
         self._output_file = output_file
         self._driver_path = driver_path
